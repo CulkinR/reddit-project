@@ -27,4 +27,8 @@ export class AppComponent {
     console.log(`Adding Article Title: ${title.value} and Article Link: ${link.value}`)
     return false
   }
+
+  sortedArticles(): Article[] {
+    return this.articles.sort((a:Article, b:Article) => b.votes - a.votes);
+  }
 }
